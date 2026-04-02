@@ -9,7 +9,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 WORKDIR /app
 
 # 4. Copy your local script
-COPY pyspark_hello_world.py .
+COPY *.py .
 
 # 5. Use the official spark-submit to run the script
 ENTRYPOINT [ "/opt/spark/bin/spark-submit" ]
