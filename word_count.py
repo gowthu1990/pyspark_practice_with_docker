@@ -6,7 +6,7 @@ from pyspark.sql import functions as f
 # 1. Define Paths (These point to the mounted Docker Volume)
 DATA_DIR = "/app/data"
 INPUT_FILE = f"{DATA_DIR}/words.txt"
-OUTPUT_DIR = f"{DATA_DIR}/words_output"
+OUTPUT_DIR = f"{DATA_DIR}/output/words_output"
 
 # 2. Initialize Spark
 spark = SparkSession.builder.appName("WordCounter").getOrCreate()
