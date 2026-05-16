@@ -29,3 +29,26 @@ Run the container to trigger the Spark job. The container uses spark-submit as t
 ```bash
 docker run --rm pyspark-practice
 ```
+
+### 3. Processing Local Data (Volume Mounts)
+
+To process files stored locally on your host machine without rebuilding the image, use a Docker bind mount (`-v`). 
+This dynamically maps a local directory (e.g., `./data`) to a directory inside the container (e.g., `/app/data`), 
+allowing your PySpark code to read and write files in real-time.
+
+Ensure you have a `data` folder in your project root before running.
+
+**For macOS / Linux / Native WSL Terminal:**
+```bash
+docker run --rm -v $(pwd)/data:/app/data pyspark-practice
+```
+
+**For Windows (Pwershell):**
+```bash
+docker run --rm -v "${PWD}\data":/app/data pyspark-practice
+```
+
+**For Git Bash (Windows) Users:**
+```bash
+MSYS_NO_PATHCONV=1 docker run --rm -v $(pwd)/data:/app/data pyspark-practice
+```
