@@ -1,4 +1,6 @@
-import word_count
+import initialize_spark_session
+
+import even_or_odd
 
 if __name__ == "__main__":
-    word_count.word_count()
+    even_or_odd.even_or_odd()
