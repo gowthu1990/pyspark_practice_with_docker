@@ -1,6 +1,4 @@
-import initialize_spark_session
-
-import even_or_odd
+import fullname
 
 if __name__ == "__main__":
-    even_or_odd.even_or_odd()
+    fullname.merge_name()
