@@ -9,9 +9,9 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 WORKDIR /app
 
 # 4. Copy your local script
-COPY *.py .
-
+COPY ./src /app/src
 
 # 5. Use the official spark-submit to run the script
 ENTRYPOINT [ "/opt/spark/bin/spark-submit" ]
-CMD [ "main.py" ]
+
+CMD ["/app/src/practice/pyspark_practice/practice_20260905/main.py"]
